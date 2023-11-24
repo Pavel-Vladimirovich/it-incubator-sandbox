@@ -14,8 +14,16 @@
 // ✔️ SOLUTIONS:
 
 function consecutive(array) {
-	console.log(array.join(' ').match(/\d{3,}/))
-	  
+	// Sort the array in ascending order
+	array.sort((a, b) => a - b);
+
+	let count = 0;
+
+	// Iterate through the sorted array and count the gaps between consecutive numbers
+	for (let i = 0; i < array.length - 1; i++) {
+		const diff = array[i + 1] - array[i] - 1;
+		count += diff;
 	}
 
-consecutive([4,5,3,83,322,2])
+	return count;
+}
