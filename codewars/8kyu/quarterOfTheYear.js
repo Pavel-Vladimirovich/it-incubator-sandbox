@@ -24,4 +24,4 @@ const quarterOf = (month) => {
 
 // or
 
-// const quarterOf = (month) => Math.ceil(month / 3); solution GhatGPT
+// const quarterOf = (month) => Math.ceil(month / 3);
