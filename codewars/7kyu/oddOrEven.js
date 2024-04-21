@@ -34,7 +34,12 @@ function oddOrEven(array) {
     }
 }
 
-oddOrEven([0, 1, 5]) //'even'
-oddOrEven([0, 1, 3]) //'even'
-oddOrEven([0, 1, 4]) //'add'
-oddOrEven([]) //'even'
+// or
+const oddOrEven1 = (arr) => {
+    return arr.reduce((a, b) => (a + b), 0) % 2 ? 'even' : 'odd'
+}
+
+oddOrEven1([0, 1, 5]) //'even'
+oddOrEven1([0, 1, 3]) //'even'
+oddOrEven1([0, 1, 4]) //'add'
+oddOrEven1([])
