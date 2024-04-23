@@ -14,14 +14,17 @@
 // ✔️ SOLUTIONS:
 
 function deleteNth(arr, n) {
-    const result = []
-    for (let i = 0; i < arr.length; i++) {
-        if(!result.includes(arr[i])){
-            result.push(arr[i])
-        }
+    let count = {};
+    let result = [];
 
+    for (let num of arr) {
+        count[num] = (count[num] || 0) + 1;
+        if (count[num] <= n) {
+            result.push(num);
+        }
     }
-    return result
+
+    return result;
 }
 
 
